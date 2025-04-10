@@ -1,5 +1,11 @@
+import styles from './newissue.module.css';
+
 const NewIssuePage = () => {
-  return 'new issue page';
+  return (
+    <div>
+      <button className={styles.button}>hello</button>
+    </div>
+  );
 }
 
 export default NewIssuePage
