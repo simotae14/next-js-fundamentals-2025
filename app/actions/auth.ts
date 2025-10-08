@@ -102,6 +102,7 @@ export const signIn = async (formData: FormData): Promise<ActionResponse> => {
 }
 
 export const signUp = async (formData: FormData): Promise<ActionResponse> => {
+  console.log('here from the Server')
   try {
     // Add a small delay to simulate network latency
     await mockDelay(700)
