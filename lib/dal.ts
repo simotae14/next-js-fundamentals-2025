@@ -7,6 +7,7 @@ import { mockDelay } from './utils'
 
 // Current user
 export const getCurrentUser = async () => {
+  await mockDelay(1000)
   // Grab Json web token from the cookies
   const session = await getSession()
   // if no session, the user is not logged in
@@ -40,6 +41,7 @@ export const getUserByEmail = async (email: string) => {
 // Get all issues that belongs to the current user
 export async function getIssues() {
   try {
+    await mockDelay(1000)
     const result = await db.query.issues.findMany({
       with: {
         user: true,
